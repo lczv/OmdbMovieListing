@@ -78,7 +78,8 @@
                     android:id="@+id/cvMoviePoster"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/defaultMarginElements"
+                    android:layout_marginStart="@dimen/defaultMarginElements"
+                    android:layout_marginTop="24dp"
                     android:adjustViewBounds="true"
                     app:cardElevation="20dp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -147,11 +148,13 @@
                 <TextView
                     android:id="@+id/tvCountry"
                     style="@style/TextViewDefault.Inverse"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/defaultMarginElements"
+                    android:layout_marginStart="@dimen/defaultMarginElements"
+                    android:layout_marginEnd="@dimen/defaultMarginElements"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/cvMoviePoster"
-                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/cvMoviePoster"
                     tools:text="USA" />
 
                 <TextView
@@ -159,7 +162,9 @@
                     style="@style/TextViewDefault.Inverse"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/defaultMarginElements"
+                    android:layout_marginStart="@dimen/defaultMarginElements"
+                    android:layout_marginEnd="@dimen/defaultMarginElements"
+                    android:layout_marginTop="@dimen/defaultMarginScreen"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
