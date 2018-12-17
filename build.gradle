@@ -1,0 +1,40 @@
+buildscript {
+    ext.kotlin_version = '1.2.61'
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.2.1'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext {
+    supportLibraryVersion = "28.0.0"
+    appCompatVersion = "1.1.0-alpha01"
+    recyclerViewVersion = "1.0.0"
+    constraintLayoutVersion = "1.1.3"
+    lifecycleVersion = "2.0.0"
+    retrofitVersion = "2.1.0"
+    gsonVersion = "2.8.2"
+    materialVersion = "1.0.0"
+    picassoVersion = "2.71828"
+    hawkVersion = "2.0.1"
+    expressoVersion = "3.1.0"
+    restMockVersion = "0.3.2"
+    mockitoVersion = "2.8.47"
+}

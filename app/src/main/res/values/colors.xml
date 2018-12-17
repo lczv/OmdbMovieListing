@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#454545</color>
+    <color name="colorPrimaryDark">#a62330</color>
+    <color name="colorAccent">#ff583a</color>
+    <color name="colorFavorited">#ff583a</color>
+    <color name="colorNotFavorited">#71ffd2ca</color>
+    <color name="white50">#80ffffff</color>
+    <color name="white90">#dcffffff</color>
+    <color name="defaultTextColor">#303030</color>
+    <color name="inverseTextColor">#FFFFFF</color>
+</resources>

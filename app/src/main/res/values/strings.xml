@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Desafio Mobile</string>
+    <string name="no_movie_found">Nenhum filme encontrado\n Pesquise novamente</string>
+    <string name="movie_saved_success">Filme salvo com sucesso</string>
+    <string name="movie_removed_success">Filme removido com sucesso</string>
+    <string name="search_movies">Pesquise por filmes</string>
+    <string name="please_check_internet">Por favor, verifique sua conexão com a internet</string>
+</resources>

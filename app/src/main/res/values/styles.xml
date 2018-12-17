@@ -1,0 +1,39 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/colorPrimary</item>
+        <item name="android:textViewStyle">@style/TextViewDefault</item>
+    </style>
+
+    <style name="AppTheme.BrandedLaunch" parent="AppTheme">
+        <item name="android:windowBackground">@drawable/poster_placeholder</item>
+    </style>
+
+    <style name="TextViewDefault" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/defaultTextColor</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="TextViewDefault.Inverse" parent="TextViewDefault">
+        <item name="android:textColor">@color/inverseTextColor</item>
+    </style>
+
+    <style name="TextViewDefault.Inverse.Bold" parent="TextViewDefault.Inverse">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="SearchViewDefault" parent="Base.Widget.AppCompat.SearchView">
+        <item name="android:background">@drawable/background_rounded_corners</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:paddingLeft">@dimen/defaultMarginElements</item>
+        <item name="android:paddingRight">@dimen/defaultMarginElements</item>
+
+    </style>
+
+</resources>

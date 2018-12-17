@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="defaultMarginElements">8dp</dimen>
+    <dimen name="defaultMarginScreen">14dp</dimen>
+    <dimen name="largeMarginScreen">18dp</dimen>
+    <dimen name="textSmall">14dp</dimen>
+    <dimen name="textMedium">14dp</dimen>
+    <dimen name="textLarge">14dp</dimen>
+</resources>

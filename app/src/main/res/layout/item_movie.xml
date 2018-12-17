@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:layout_marginStart="@dimen/defaultMarginElements"
+    android:layout_marginTop="10dp"
+    android:layout_marginEnd="@dimen/defaultMarginElements"
+    android:layout_marginBottom="10dp"
+    android:orientation="vertical"
+    app:cardCornerRadius="0dp"
+    app:cardElevation="10dp">
+
+    <ImageView
+        android:id="@+id/ivBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha=".2"
+        android:importantForAccessibility="no"
+        android:scaleType="centerCrop"
+        android:src="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lInternal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivMovieCover"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/poster_placeholder" />
+
+        <View
+            android:id="@+id/vSeparator"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/defaultMarginElements"
+            android:alpha=".5"
+            android:background="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/ivMovieCover"
+            app:layout_constraintStart_toEndOf="@+id/ivMovieCover"
+            app:layout_constraintTop_toTopOf="@+id/ivMovieCover" />
+
+        <TextView
+            android:id="@+id/tvMovieTitle"
+            style="@style/TextViewDefault.Inverse"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/defaultMarginElements"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/tvRightArrow"
+            app:layout_constraintStart_toEndOf="@+id/vSeparator"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Stargate" />
+
+        <TextView
+            android:id="@+id/tvLength"
+            style="@style/TextViewDefault.Inverse"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/defaultMarginElements"
+            android:drawableStart="@drawable/ic_access_time"
+            android:drawableLeft="@drawable/ic_access_time"
+            android:drawableTint="@android:color/white"
+            android:gravity="center_vertical"
+            app:layout_constraintBottom_toBottomOf="@+id/tvYear"
+            app:layout_constraintEnd_toEndOf="@+id/tvRightArrow"
+            app:layout_constraintStart_toEndOf="@+id/tvYear"
+            app:layout_constraintTop_toTopOf="@+id/tvYear"
+            tools:text="142 min" />
+
+        <TextView
+            android:id="@+id/tvYear"
+            style="@style/TextViewDefault.Inverse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/defaultMarginElements"
+            android:drawableStart="@drawable/ic_date"
+            android:drawableLeft="@drawable/ic_date"
+            android:drawableTint="@android:color/white"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/vSeparator"
+            app:layout_constraintTop_toBottomOf="@+id/tvGenre"
+            tools:text="1990" />
+
+        <TextView
+            android:id="@+id/tvGenre"
+            style="@style/TextViewDefault.Inverse"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/defaultMarginElements"
+            android:drawableTint="@color/colorAccent"
+            app:layout_constraintEnd_toStartOf="@+id/tvRightArrow"
+            app:layout_constraintStart_toEndOf="@+id/vSeparator"
+            app:layout_constraintTop_toBottomOf="@+id/tvMovieTitle"
+            tools:text="Ficção Científica" />
+
+        <ImageView
+            android:id="@+id/tvRightArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/defaultMarginElements"
+            android:src="@drawable/ic_arrow_right"
+            android:tint="@color/colorPrimaryDark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
