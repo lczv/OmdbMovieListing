@@ -62,7 +62,4 @@ dependencies {
     androidTestImplementation "androidx.test.espresso:espresso-intents:$expressoVersion"
     androidTestImplementation "androidx.test.espresso:espresso-contrib:$expressoVersion"
     androidTestImplementation "com.github.andrzejchm.RESTMock:android:$restMockVersion"
-
-
-
 }

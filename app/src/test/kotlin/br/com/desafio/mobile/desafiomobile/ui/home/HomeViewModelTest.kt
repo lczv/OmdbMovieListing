@@ -45,59 +45,69 @@ class HomeViewModelTest {
 
     @Test
     fun loadStoredMovies_withSuccess() {
-
+        // Mock
         val dummyMovie = Movie()
 
+        // Actuion
         homeViewModel.loadSavedMovies()
 
+        // Assertion
         verify(movieDataSource).getStoredMovies(capture(localMoviesCaptor))
 
+        // Action
         localMoviesCaptor.value.onSuccess(listOf(dummyMovie))
 
+        // Assertion
         Assert.assertEquals(homeViewModel.movies.value?.get(0), dummyMovie)
     }
 
     @Test
     fun searchMovies_withSuccess() {
-
+        // Mock
         val dummyMovie = Movie()
 
+        // Action
         homeViewModel.searchMovie("")
 
+        // Assertion
         verify(movieDataSource).searchMovie(ArgumentMatchers.anyString(), capture(localMoviesCaptor))
 
+        // Action
         localMoviesCaptor.value.onSuccess(dummyMovie)
 
+        // Assertion
         verify(movieDataSource).getStoredMovies(capture(remoteMoviesCaptor))
 
+        // Mock
         remoteMoviesCaptor.value.onSuccess(listOf(dummyMovie))
 
+        // Assertion
         Assert.assertEquals(homeViewModel.movies.value?.get(0), dummyMovie)
     }
 
     @Test
     fun loadStoredMovies_withFailure() {
-
+        // Action
         homeViewModel.loadSavedMovies()
-
         verify(movieDataSource).getStoredMovies(capture(localMoviesCaptor))
 
+        // Mock
         localMoviesCaptor.value.onFailure(ErrorResponse.UNKNOWN_ERROR)
 
+        // Assertion
         Assert.assertEquals(homeViewModel.errorStatus.value, ErrorResponse.UNKNOWN_ERROR)
     }
 
     @Test
     fun searchMovies_withFailure() {
-
-        val dummyMovie = Movie()
-
+        // Action
         homeViewModel.searchMovie("")
-
         verify(movieDataSource).searchMovie(ArgumentMatchers.anyString(), capture(localMoviesCaptor))
 
+        // Mock
         localMoviesCaptor.value.onFailure(ErrorResponse.UNKNOWN_ERROR)
 
+        // Assertion
         Assert.assertEquals(homeViewModel.errorStatus.value, ErrorResponse.UNKNOWN_ERROR)
     }
 }

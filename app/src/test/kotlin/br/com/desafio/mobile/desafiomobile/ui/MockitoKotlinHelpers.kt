@@ -17,9 +17,8 @@
 package br.com.desafio.mobile.desafiomobile.ui
 
 import org.mockito.ArgumentCaptor
+import org.mockito.Mockito
 
-/**
- * Returns ArgumentCaptor.capture() as nullable type to avoid java.lang.IllegalStateException
- * when null is returned.
- */
 fun <T> capture(argumentCaptor: ArgumentCaptor<T>): T = argumentCaptor.capture()
+
+fun <T> any(): T = Mockito.any<T>()

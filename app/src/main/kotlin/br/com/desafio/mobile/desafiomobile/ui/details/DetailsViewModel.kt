@@ -7,7 +7,7 @@ import br.com.desafio.mobile.desafiomobile.data.datasource.RepositoryCallback
 import br.com.desafio.mobile.desafiomobile.data.model.Movie
 import br.com.desafio.mobile.desafiomobile.ui.BaseViewModel
 
-class DetailsViewModel(val movieDataSource: MovieDataSource) : BaseViewModel() {
+open class DetailsViewModel(val movieDataSource: MovieDataSource) : BaseViewModel() {
 
     val movie = MutableLiveData<Movie>()
 
