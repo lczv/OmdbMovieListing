@@ -12,7 +12,7 @@ android {
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "br.com.desafio.mobile.desafiomobile.CustomTestRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         buildConfigField("String","OMDBKEY","\"40d7b984\"")
     }
     buildTypes {
@@ -62,4 +62,5 @@ dependencies {
     androidTestImplementation "androidx.test.espresso:espresso-intents:$expressoVersion"
     androidTestImplementation "androidx.test.espresso:espresso-contrib:$expressoVersion"
     androidTestImplementation "com.github.andrzejchm.RESTMock:android:$restMockVersion"
+    androidTestImplementation "com.squareup.okhttp3:mockwebserver:$mockWebServerVersion"
 }

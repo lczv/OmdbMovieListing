@@ -9,7 +9,7 @@ class CustomTestApplication : Application() {
     override fun onCreate() {
         super.onCreate()
 
-        ApiInstance.create(this, RESTMockServer.getUrl())
+//        ApiInstance.create(this, RESTMockServer.getUrl())
 
         Hawk.init(this).build()
     }

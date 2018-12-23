@@ -37,4 +37,5 @@ ext {
     expressoVersion = "3.1.0"
     restMockVersion = "0.3.2"
     mockitoVersion = "2.8.47"
+    mockWebServerVersion = "3.2.0"
 }
