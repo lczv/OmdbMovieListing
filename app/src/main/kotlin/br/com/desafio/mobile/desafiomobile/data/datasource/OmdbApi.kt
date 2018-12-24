@@ -9,6 +9,7 @@ interface OmdbApi {
 
     @GET("/")
     fun searchMovie(@Query("t") movieTitle: String,
+                    @Query("plot") plot: String = "full",
                     @Query("apikey") apiKey: String): Call<Movie>
 
 }

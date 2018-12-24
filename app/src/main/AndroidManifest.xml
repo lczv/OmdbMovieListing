@@ -17,6 +17,7 @@
 
         <activity
             android:name=".ui.home.HomeActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.BrandedLaunch"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
@@ -26,8 +27,9 @@
         </activity>
 
         <activity
-            android:label=""
             android:name=".ui.details.DetailsActivity"
+            android:label=""
+            android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize" />
 
     </application>

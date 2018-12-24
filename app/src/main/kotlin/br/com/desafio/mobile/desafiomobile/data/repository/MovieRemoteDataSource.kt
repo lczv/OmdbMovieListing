@@ -12,7 +12,7 @@ import retrofit2.Response
 open class MovieRemoteDataSource(private val omdbApi: OmdbApi) : MovieDataSource {
 
     override fun searchMovie(movieTitle: String, callback: RepositoryCallback) {
-        omdbApi.searchMovie(movieTitle, BuildConfig.OMDBKEY).enqueue(
+        omdbApi.searchMovie(movieTitle = movieTitle, apiKey = BuildConfig.OMDBKEY).enqueue(
                 object : Callback<Movie> {
                     override fun onFailure(call: Call<Movie>?, t: Throwable?) {
                         if (t is NoInternetException) {
